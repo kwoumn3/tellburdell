@@ -1,0 +1,23 @@
+extends layout
+
+block content
+    h1 Feedback Submission
+    form#complaint-form
+        label(for='name-choice') Named
+        input#name-choice(type='radio',name='name')
+        label(for='anon-choice') Anonymous
+        input#anon-choice(type='radio',name='name')
+        br
+
+        label(for='department') Department
+        select#department.form-control
+            option(value='Department 1') Department 1
+            option(value='Department 2') Department 2
+            option(value='Department 3') Department 3
+        br
+
+        label(for='feedback') Complaint / Comment
+        textarea#feedback.form-control(type='textarea',row='4',cols='50')
+        br
+
+        input#submit(type='button',value='Submit')

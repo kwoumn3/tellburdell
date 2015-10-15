@@ -1,0 +1,19 @@
+extends layout
+
+block content
+    h1 Feedback List
+    table
+        thead
+            tr
+                th Name
+                th Date
+                th Department
+                th Feedback
+        tbody
+            each record, i in records
+                tr
+                    td #{record.name}
+                    td #{record.date}
+                    td #{record.department_id}
+                    td #{record.text}
+    
